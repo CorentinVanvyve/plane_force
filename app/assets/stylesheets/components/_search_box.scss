@@ -1,0 +1,20 @@
+.search-box {
+    
+    height:100px;
+
+    width: 60%;
+    background-color: white;
+    box-shadow: $box-shadow;
+    margin: 50px auto;
+    border-radius: $border-radius-lg;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+        height: 40px;
+        width: 40px;
+    }
+
+}
+
