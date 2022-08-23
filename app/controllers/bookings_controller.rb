@@ -5,24 +5,31 @@ class BookingsController < ApplicationController
   end
 
   def show
+    authorize @booking
   end
 
   def new
+    @plane = Plane.find(params[:plane_id])
+    authorize @plane
     @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.user = @user
-      if @booking.save
-        redirect_to booking_path(@user)
-      else
-        render :new, status: :unprocessable_entity
-      end
+    @plane = Plane.find(params[:plane_id])
+    @booking.plane = @plane
+    @booking.user = current_user
+    authorize @plane
+    if @booking.save
+      redirect_to plane_path(@plane)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy
     @booking = Booking.destroy
+    authorize @booking
     redirect_to bookings_path(booking.user), status: :see_other
   end
 
@@ -33,6 +40,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :price, :comment)
+    params.require(:booking).permit(:start_date, :end_date, :price, :comment, :plane_id)
   end
 end
