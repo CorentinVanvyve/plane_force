@@ -19,7 +19,9 @@ $warning:    $orange;
 
 // Buttons & inputs' radius
 $border-radius:    2px;
-$border-radius-lg: 2px;
-$border-radius-sm: 2px;
+$border-radius-lg: 10px;
+$border-radius-sm: 5px;
 
 // Override other variables below!
+
+$box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.31);
