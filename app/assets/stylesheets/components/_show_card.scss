@@ -1,0 +1,20 @@
+.show-card {
+    height: 400px;
+    width: 800px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    border-radius: $border-radius-lg
+}
+
+.show-card-img {
+    height: 70%;
+    background-color: grey;
+}
+
+.show-card-text {
+    display:flex;
+    justify-content: space-between;
+    margin: 20px 10px 10px 10px;
+    width: 60%;
+}
