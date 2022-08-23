@@ -2,6 +2,10 @@
 <% plane = @planes.sample%>
 <div class = "home-card">
   <div class = "home-card-img">
+    
+    <% if plane.photos.attached? %>
+      <%= cl_image_tag plane.photos[0].key, height: 300, crop: :fill%>
+      <% end%>
   </div>
   <div class = "home-card-text">
     <p class = "home-card-text-specific">Model: <%=plane.model%></p>
