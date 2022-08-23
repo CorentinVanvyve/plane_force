@@ -1,4 +1,6 @@
 <h1><%= @plane.name%> </h1>
 
+
+
 <%= link_to "Edit this plane", edit_plane_path(@plane) %>
 <%= link_to "Remove this plane", plane_path(@plane),data: { "turbo-method": :delete, "turbo-confirm": "Are you sure bitch?" } %>

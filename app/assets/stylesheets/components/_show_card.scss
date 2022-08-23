@@ -4,12 +4,13 @@
     background-color: white;
     margin-bottom: 20px;
     margin-left: 10px;
-    border-radius: $border-radius-lg
+    border-radius: $border-radius-lg;
+    
 }
 
 .show-card-img {
+    background-color: gray;
     height: 70%;
-    background-color: grey;
 }
 
 .show-card-text {
@@ -17,4 +18,23 @@
     justify-content: space-between;
     margin: 20px 10px 10px 10px;
     width: 60%;
+}
+
+
+.plane-name-on-card {
+    
+    padding: 10px;
+    
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    
+    display: inline-block;
+    height:100%;
+    width: 100%;
+    
+
+    &:hover {
+       color: rgba(56, 55, 55, 0.627);
+    }
 }
