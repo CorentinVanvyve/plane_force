@@ -1,6 +1,8 @@
-  <ul>
+<div class = "container">
+  <div class = "planes-index">
+<h1>Planes</h1>
   <% @planes.each do |plane| %>
-    <li><%= link_to plane.name,plane_path(plane) %></li>
+    <%=render "planes/show-planes", plane: %>
   <% end %>
-
 <%= link_to "Add a plane", new_plane_path() %>
+</div>

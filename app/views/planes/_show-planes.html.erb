@@ -1,0 +1,15 @@
+<div class = "show-card">
+  <div class = "show-card-img">
+  <%= link_to plane.name,plane_path(plane), class: "plane-name-on-card" %>
+  </div>
+  <div class = "show-card-text">
+    <div>
+      <p>Model: <%=plane.model%></p>
+      <p>Address: <%=plane.address%></p>
+    </div>
+    <div>
+      <p>Price: <%=plane.price_per_hour%></p>
+      <p>Owner: <%=plane.user.first_name%></p>
+    </div>
+  </div>
+</div>
