@@ -1,10 +1,16 @@
 <h1><%= @plane.name%> </h1>
-
-
-
+<p>Model : <%= @plane.model%></p>
+<p>Price / h : <%= @plane.price_per_hour%></p>
+<p>Seats : <%= @plane.seats%></p>
+<p>Overview : <%= @plane.overview%></p>
+<p>Address : <%= @plane.address%></p>
+<% owner = User.find(@plane.user_id) %>
+<p>Owner : <%= owner.first_name %></p>
 
 <%= link_to "Edit this plane", edit_plane_path(@plane) %>
 <%= link_to "Remove this plane", plane_path(@plane),data: { "turbo-method": :delete, "turbo-confirm": "Are you sure bitch?" } %>
+
+<%= link_to "Book a flight w/ this plane",  new_plane_booking_path(@plane) %>
 
 <% if policy(@plane).edit? %>
   <%= link_to "Edit this plane", edit_plane_path(@plane) %>|
@@ -14,3 +20,9 @@
   <%= link_to "Remove this plane", plane_path(@plane),data: { "turbo-method": :delete, "turbo-confirm": "Are you sure bitch?" } %>
 <% end %>
 
+  <ul>
+    <% @plane.bookings.each do |booking| %>
+      <li><%= booking.start_date %> to <%= booking.end_date %></li>
+     <%= link_to "delete",  plane_booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove ?"}, class: 'text-danger' %>
+    <% end %>
+  </ul>
