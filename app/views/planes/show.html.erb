@@ -1,24 +1,49 @@
-<h1><%= @plane.name%> </h1>
-<p>Model : <%= @plane.model%></p>
-<p>Price / h : <%= @plane.price_per_hour%></p>
-<p>Seats : <%= @plane.seats%></p>
-<p>Overview : <%= @plane.overview%></p>
-<p>Address : <%= @plane.address%></p>
-<% owner = User.find(@plane.user_id) %>
-<p>Owner : <%= owner.first_name %></p>
+<div class="show-plane">
+  <div class="info-show-plane">
+    <div class="container-content"><h1 class="planes-name"><%= @plane.name%> </h1>
+      <div class="info-price">
+        <p>Model : <%= @plane.model%></p>
+        <p>Price / h : <%= @plane.price_per_hour%></p>
+        <p>Seats : <%= @plane.seats%></p>
+      </div>
+      <p class="overview">Overview : <%= @plane.overview%></p>
+      <div class="info-owner">
+        <p>Address : <%= @plane.address%></p>
+        <% owner = User.find(@plane.user_id) %>
+        <p>Owner : <%= owner.first_name %></p>
+    </div>
+  </div>
+  
+  
+    <div class="buttons">
+      <% if policy(@plane).edit?%>
+      <div class="btn-blue">
+          <%= link_to "Edit this plane", edit_plane_path(@plane) %>
+      </div>
+      <%end%>
+      <% if policy(@plane).destroy?%>
+      <div class="btn-blue">
+      <%= link_to "Destroy this plane", planes_path %>
+    </div>
+      <%end%>
 
-<%= link_to "Edit this plane", edit_plane_path(@plane) %>
-<%= link_to "Remove this plane", plane_path(@plane), data: { "turbo-method": :delete, "turbo-confirm": "Are you sure bitch?" } %>
 
-<%= link_to "Book a flight w/ this plane",  new_plane_booking_path(@plane) %>
-
-<% if policy(@plane).edit? %>
-  <%= link_to "Edit this plane", edit_plane_path(@plane) %>|
-<% end %>
-
-<% if policy(@plane).edit? %>
-  <%= link_to "Remove this plane", plane_path(@plane),data: { "turbo-method": :delete, "turbo-confirm": "Are you sure bitch?" } %>
-<% end %>
+    <div class="btn-blue"><%= link_to "Book a flight w/ this plane",  new_plane_booking_path(@plane) %></div>
+    </div>
+  </div>
+  <div>
+    <div class = "show-card">
+    <% if @plane.photos.attached?%>
+      <div class = "show-card-img" style ="background-image:
+      url('<%= cl_image_path @plane.photos[0].key%>')">
+      <% else%>
+        <div class= "show-card-img" style = "background-image: url('https://www.arachnys.com/wp-content/uploads/2022/02/iStock-466619660.jpg');">
+        <%end%>
+        <span><%= link_to @plane.name,plane_path(@plane), class: "plane-name-on-card" %></span>
+      </div>
+    </div>
+  </div>
+</div>
 
   <ul>
     <% @plane.bookings.each do |booking| %>

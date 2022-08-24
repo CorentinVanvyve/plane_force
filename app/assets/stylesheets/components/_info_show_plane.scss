@@ -1,0 +1,57 @@
+.show-plane{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+
+.info-show-plane {
+  display:flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.planes-name {
+  text-align: center;
+}
+
+.info-price {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0px 20px 0px;
+}
+
+.info-owner {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0px 20px 0px;
+}
+
+.overview {
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin: 20px
+}
+
+.btn-blue a {
+  text-decoration: none;
+  color: white;
+  margin: 10px
+}
+
+.btn-blue {
+  margin: 30px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: blue;
+  padding: 5px
+}
+
+.btn-blue:hover {
+  background-color: rgb(80, 80, 239);
+}
