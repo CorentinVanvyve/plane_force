@@ -7,7 +7,9 @@
     margin-bottom: 20px;
     //margin-left: 10px;
     border-radius: $border-radius-lg;
-    
+    box-shadow: $box-shadow;
+    padding: 0px;
+
 
     img{
         background-position: center;
@@ -20,8 +22,8 @@
 .show-card-img {
    background-position: center;
    height: 100%;
-    
-    
+
+
    // background-image: url("https://www.arachnys.com/wp-content/uploads/2022/02/iStock-466619660.jpg");
 }
 
@@ -30,13 +32,13 @@
     justify-content: space-between;
     margin-left: 10px;
     width: 60%;
-    
-    
+
+
 
 }
 
 .plane-name-on-card {
-    
+
     padding: 10px;
     text-decoration: none;
     color: black;
@@ -44,9 +46,33 @@
     display: inline-block;
     height:100%;
     width: 100%;
-    
+
 
     &:hover {
        color: rgba(56, 55, 55, 0.627);
     }
+}
+
+.planes-index {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+.btn-blue {
+  margin: 30px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: blue;
+  padding: 5px
+}
+
+.btn-blue:hover {
+  background-color: rgb(80, 80, 239);
+}
+
+.btn-blue a {
+  text-decoration: none;
+  color: white;
+  margin: 30px
 }
