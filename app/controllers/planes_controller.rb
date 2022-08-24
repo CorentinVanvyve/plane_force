@@ -50,6 +50,6 @@ class PlanesController < ApplicationController
   end
 
   def plane_params
-    params.require(:plane).permit(:name, :model, :price_per_hour, :seats, :overview, :address)
+    params.require(:plane).permit(:name, :model, :price_per_hour, :seats, :overview, :address, photos: [])
   end
 end

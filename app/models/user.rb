@@ -7,4 +7,6 @@ class User < ApplicationRecord
          has_many :planes
          has_many :bookings
          validates :first_name, :username, :last_name, :email, :password, presence: true
+
+         has_one_attached :photo
 end

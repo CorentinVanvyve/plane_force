@@ -1,37 +1,46 @@
 .show-card {
     height: 400px;
-    width: 800px;
+    width: 600px;
+    display:flex;
+    flex-direction: column;
     background-color: white;
     margin-bottom: 20px;
-    margin-left: 10px;
+    //margin-left: 10px;
     border-radius: $border-radius-lg;
-   
     
+
+    img{
+        background-position: center;
+        object-fit: cover;
+        width: 100%;
+    }
 }
 
+
 .show-card-img {
-    background-position: center;
-    height: 70%;
+   background-position: center;
+   height: 100%;
     
-    background-image: url("https://www.arachnys.com/wp-content/uploads/2022/02/iStock-466619660.jpg");
+    
+   // background-image: url("https://www.arachnys.com/wp-content/uploads/2022/02/iStock-466619660.jpg");
 }
 
 .show-card-text {
     display:flex;
     justify-content: space-between;
-    margin: 20px 10px 10px 10px;
+    margin-left: 10px;
     width: 60%;
-}
+    
+    
 
+}
 
 .plane-name-on-card {
     
     padding: 10px;
-    
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: bold;
-    
     display: inline-block;
     height:100%;
     width: 100%;

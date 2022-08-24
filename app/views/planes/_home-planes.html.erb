@@ -1,7 +1,12 @@
 <% @planes = Plane.all%>
 <% plane = @planes.sample%>
-<div class = "home-card">
-  <div class = "home-card-img">
+<div class = "home-card">  
+   <% if plane.photos.attached?%>
+  <div class = "home-card-img" style ="background-image:
+    url('<%= cl_image_path plane.photos[0].key%>')">
+  <% else%>
+    <div class= "home-card-img" style = "background-image: url('https://www.arachnys.com/wp-content/uploads/2022/02/iStock-466619660.jpg');">
+  <%end%>
   </div>
   <div class = "home-card-text">
     <p class = "home-card-text-specific">Model: <%=plane.model%></p>
