@@ -23,7 +23,7 @@
       <%end%>
       <% if policy(@plane).destroy?%>
       <div class="btn-blue">
-      <%= link_to "Destroy this plane", planes_path %>
+      <%= link_to "Destroy this plane", plane_path(@plane), data: { turbo_method: :delete, turbo_confirm: "Please, we need your plane" }%>
     </div>
       <%end%>
 
