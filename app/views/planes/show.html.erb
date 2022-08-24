@@ -27,7 +27,6 @@
     </div>
       <%end%>
 
-
     <div class="btn-blue"><%= link_to "Book a flight w/ this plane",  new_plane_booking_path(@plane) %></div>
     </div>
   </div>
@@ -47,7 +46,7 @@
 
   <ul>
     <% @plane.bookings.each do |booking| %>
-      <li><%= booking.start_date %> to <%= booking.end_date %></li>
+      <li><%= booking.start_date %> to <%= booking.end_date %> - ( <%= booking.price %>€ )</li>
       <% if policy(booking).destroy?%>
      <%= link_to "delete",  booking_path(booking), data: { "turbo_method": :delete, "turbo_confirm": "Are you sure you want to remove ?"}, class: 'text-danger' %>
       <%end%>
