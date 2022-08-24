@@ -32,9 +32,13 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    @booking = Booking.destroy
+    
     authorize @booking
-    redirect_to bookings_path(booking.user), status: :see_other
+    @booking.destroy
+    
+    
+    
+    redirect_to planes_path, status: :see_other
   end
 
   private

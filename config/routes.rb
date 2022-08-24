@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :planes do
-    resources :bookings, except: [:update, :edit]
+    resources :bookings, except: [:update, :edit, :delete]
   end
+    resources :bookings, only: :destroy
 end

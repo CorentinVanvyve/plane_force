@@ -1,12 +1,14 @@
 <div class = "container">
+<h1>My planes</h1>
+<br>
   <div class = "planes-index">
-<h1>Planes</h1>
 
   <% @planes.each do |plane| %>
-  
+
     <%=render "planes/show-planes", plane: %>
-   
+
   <% end %>
    </div>
+  <div class = "btn-blue">
 <%= link_to "Add a plane", new_plane_path() %>
-
+  </div>
