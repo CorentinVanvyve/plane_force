@@ -22,8 +22,6 @@
 .show-card-img {
    background-position: center;
    height: 100%;
-
-
    // background-image: url("https://www.arachnys.com/wp-content/uploads/2022/02/iStock-466619660.jpg");
 }
 
@@ -32,13 +30,10 @@
     justify-content: space-between;
     margin-left: 10px;
     width: 60%;
-
-
-
+    
 }
 
 .plane-name-on-card {
-
     padding: 10px;
     text-decoration: none;
     color: black;
@@ -46,8 +41,6 @@
     display: inline-block;
     height:100%;
     width: 100%;
-
-
     &:hover {
        color: rgba(56, 55, 55, 0.627);
     }
