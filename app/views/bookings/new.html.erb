@@ -1,11 +1,12 @@
 <div class="container">
   <div class="booking-form">
 <h3>Book your plane ✈️</h3>
+<%#= render "shared/flashes" %>
+<p>Price per hour = <%=@plane.price_per_hour%>€</p>
 <%= simple_form_for [@plane, @booking] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
   <%= f.input :comment %>
-  <%= f.input :price %>
   <%= f.submit %>
 <% end %>
   </div>
