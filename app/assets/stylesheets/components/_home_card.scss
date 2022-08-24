@@ -17,6 +17,7 @@
     border-bottom-left-radius: $border-radius-lg;
     background-position:center;
     object-fit:scale-down;
+    position: relative;
 }
 
 .home-card-text {
@@ -24,4 +25,15 @@
     margin-left: 5px;
     flex-direction: column;
     justify-content: center;
+}
+
+
+.home-card-link {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: inline;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
