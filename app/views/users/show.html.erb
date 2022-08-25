@@ -5,24 +5,26 @@
       <div class = "avatar">
         <%= render "shared/avatar"%>
       </div>
-      <div class = "user-card-welcome"> Welcome Back <%= current_user.first_name.capitalize%>
+      <div class = "user-card-welcome"> Welcome Back <br><%= current_user.first_name.capitalize%>
       </div>
     </div>
       <div class = "user-card-bookings">
         <h3>Bookings for your planes</h3>
         <% plane = @user.planes.each do |plane|%>
-          <p><%=plane.name%></p>
+          <p><i class="fa-solid fa-plane"></i> <span class = "plane-name"><%=plane.name%></span><i class="fa-solid fa-plane"></i></p>
           <%plane.bookings.each do |booking|%>
-            <%=booking.start_date%><%=booking.end_date%>
+          <p> <i class="fa-solid fa-calendar-week"></i> </p>
+            <%=(booking.start_date).to_formatted_s(:long_ordinal)%> to<br>
+            <%=(booking.end_date).to_formatted_s(:long_ordinal)%><br>
             <%end%>
             <%end%>
       </div>
       <div class = "user-card-flights">
         <h3>Planes you've booked</h3>
-          
-
+        <%@user.bookings.each do |booking|%>
+        <span class = "plane-name"><%=booking.plane.name%></span> <%=(booking.end_date).strftime("%B %d, %Y")%><br>
+        <%end%>
       </div>
-    
   </div>
   <div class = "user-planes">
     <h2> Plane Stats </h2>
@@ -37,7 +39,7 @@
           <span class = "upcoming-bookings">
           <%plane.bookings.each do |booking|%>
               <%@revenue += booking.price%>
-              <p class = "p-booking"><%=booking.start_date%></p>
+              <p class = "p-booking"><%=(booking.end_date).strftime("%B %d, %Y")%></p>
               <%end%>
               </span>
           

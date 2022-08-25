@@ -1,35 +1,46 @@
 #page-body {
-    background-color: #92B4EC;
+    background: rgb(34,162,195);
+    background: linear-gradient(25deg, rgba(34,162,195,1) 26%, rgba(45,63,253,1) 61%, rgba(178,183,232,1) 100%);
+    backdrop-filter: blur(2px);
 }
 
 .user-container {
     width: 90%;
-    height: 100vh;
-   
+    height: 94vh;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
 }
 
 
 .user-card {
     height: 90%;
     max-width: 30%;
-    background-color: rgba(195, 186, 186, 0.318);
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.19);
+    border-radius: 16px;
+    box-shadow: inset 0 0 10px black;
+    //box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(255, 255, 255, 0.56);
     //margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     padding: 0 30px;
-    border-radius: 10%;
+    border-radius: 25px;
 }
 
 .user-card-header {
-    
+    color: #EEF4ED;
     height: 20%;
     width: 100%;
     display: flex;
@@ -39,28 +50,37 @@
     .avatar {
         height: 80px;
         width: 80px;
+        border: solid 1px white;
     }
+}
+
+.user-card-welcome {
+    font-size: 24px;
 }
 
 
 .user-card-bookings {
-    background-color: lightblue;
+    background-color: #EEF4ED;
+    color: black;
     height: 35%;
     width: 80%;
     text-align: center;
     overflow-y:scroll;
-    padding: 0 10px;
+    padding: 10px 10px;
     border-radius: $border-radius-sm;
+    box-shadow: inset 0 0 10px black;
 
 }
 
 .user-card-flights {
-    background-color: lightblue;
+    background-color: #EEF4ED;
     height: 35%;
     width: 80%;
     text-align: center;
-    padding: 0 10px;
+    padding: 10px 10px;
     border-radius: $border-radius-sm;
+    box-shadow: inset 0 0 10px black;
+    color: black;
 
 }
 
@@ -68,31 +88,35 @@
 .user-planes {
     width: 65%;
     height: 80%;
-    background-color: rgba(195, 186, 186, 0.318);
-
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.19);
+    border-radius: 16px;
+    box-shadow: inset 0 0 10px black;
+    //box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(255, 255, 255, 0.56);
     overflow-y: scroll;
+
+    h2 {
+        text-align: center;
+        padding: 20px;
+        margin: 0;
+        color: #EEF4ED;
+    }
     
 }
 
-h2 {
-    text-align: center;
-    padding: 10px;
-    margin: 0;
-}
+
 
 #user-planes-card {
-    
-   
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
 }
-
 
 .user-planes-card-solo {
     //background-color: rgba(195, 186, 186, 0.318);
-
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -102,16 +126,17 @@ h2 {
 }
 
 .user-planes-card-stats {
-    background-color: lightblue;
+    background-color: #eef5ed;
     padding: 20px 20px;
-    margin: 10px 0;
+    margin: 10px 10px;
     border-radius: $border-radius-sm;
-
+    box-shadow: inset 0 0 10px black;
 }
 
 .p-booking {
     margin: 0;
     padding: 0;
+    text-decoration:underline;
 }
 
 #upcoming-bookings {
@@ -120,5 +145,9 @@ h2 {
 
 #plane-card {
     margin: 20px;
+}
+
+.plane-name {
+    font-weight: bold;
 }
 
