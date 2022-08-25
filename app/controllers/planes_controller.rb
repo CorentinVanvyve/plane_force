@@ -1,12 +1,13 @@
 class PlanesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_plane, only: [:show, :destroy]
 
   def index
+    #@planes = Plane.all
     @planes = policy_scope(Plane)
   end
 
   def show
-    authorize @plane
   end
 
   def new
