@@ -1,7 +1,7 @@
 <% @planes = Plane.all%>
 <% plane = @planes.sample%>
 <div class = "home-card">
-    
+
    <% if plane.photos.attached?%>
   <div class = "home-card-img" style ="background-image:
     url('<%= cl_image_path plane.photos[0].key%>')">
@@ -11,10 +11,17 @@
   <%= link_to "", plane_path(plane), class: "home-card-link"%>
   </div>
   <div class = "home-card-text">
-    
-    <p class = "home-card-text-specific">Model: <%=plane.model%></p>
-    <p class = "home-card-text-specific">Location: <%=plane.address%></p>
-    <p class = "home-card-text-specific">Price: <%=plane.price_per_hour%></p>
-    <p class = "home-card-text-specific">Seats: <%=plane.seats%></p>
+
+    <p class = "home-card-text-specific"><i class="fa-solid fa-plane"></i> <%=plane.model%></p>
+    <div>
+    <% if plane.price_per_hour < 1000 %>
+      <i class="fa-solid fa-sack-dollar"></i>
+      <% elsif plane.price_per_hour > 1000 && plane.price_per_hour < 3000 %>
+      <i class="fa-solid fa-sack-dollar"></i><i class="fa-solid fa-sack-dollar"></i>
+      <% else %>
+      <i class="fa-solid fa-sack-dollar"></i><i class="fa-solid fa-sack-dollar"></i><i class="fa-solid fa-sack-dollar"></i>
+      <% end %>
+    </div>
+    <p class = "home-card-text-specific"><i class="fa-solid fa-chair"></i> <%=plane.seats%></p>
   </div>
 </div>
