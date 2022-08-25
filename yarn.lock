@@ -284,6 +284,11 @@ ajv@^6.12.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+animateplus@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/animateplus/-/animateplus-2.1.1.tgz#9669dcd44e85e98d2d202d962a77c4afc516777a"
+  integrity sha512-GWYf8v00UsHlfp1j8YVUdp/a6HMhJs2Mkn6Hioco6q8ybIM0Vu1Afphc0/phPChFY1nz9Wet0XC4gRVxiPaaDQ==
+
 bootstrap@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.2.0.tgz#838727fb60f1630db370fe57c63cbcf2962bb3d3"
