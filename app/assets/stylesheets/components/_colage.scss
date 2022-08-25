@@ -1,0 +1,45 @@
+.colage-container{
+  height: 400px;
+  width: 600px;
+  display:flex;
+  flex-direction: row;
+}
+
+.img-both {
+  height: 100%;
+  width: 50%;
+  display:flex;
+  flex-direction: column;
+}
+
+.img1 {
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+}
+
+.img2 {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 5px;
+
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+}
+
+.img3 {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  margin-top: 5px;
+
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+}
