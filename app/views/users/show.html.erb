@@ -1,0 +1,53 @@
+<div id = "page-body">
+<div class = "user-container">
+  <div class = "user-card">
+    <div class = "user-card-header">
+      <div class = "avatar">
+        <%= render "shared/avatar"%>
+      </div>
+      <div class = "user-card-welcome"> Welcome Back <%= current_user.first_name.capitalize%>
+      </div>
+    </div>
+      <div class = "user-card-bookings">
+        <h3>Bookings for your planes</h3>
+        <% plane = @user.planes.each do |plane|%>
+          <p><%=plane.name%></p>
+          <%plane.bookings.each do |booking|%>
+            <%=booking.start_date%><%=booking.end_date%>
+            <%end%>
+            <%end%>
+      </div>
+      <div class = "user-card-flights">
+        <h3>Planes you've booked</h3>
+          
+
+      </div>
+    
+  </div>
+  <div class = "user-planes">
+    <h2> Plane Stats </h2>
+    <div id = "user-planes-card">
+    <% plane = @user.planes.each do |plane|%>
+      <div class = "user-planes-card-solo">
+          <%= render "planes/user-planes", plane: plane%>
+        <div class = "user-planes-card-stats">
+  
+          <%@revenue = 0%>
+          <p > Upcoming Bookings:</p>
+          <span class = "upcoming-bookings">
+          <%plane.bookings.each do |booking|%>
+              <%@revenue += booking.price%>
+              <p class = "p-booking"><%=booking.start_date%></p>
+              <%end%>
+              </span>
+          
+          <p> Annual Revenue: <%=@revenue%> €</p>
+          <p> Plane bookings All-Time: <%=plane.bookings.count%></p>
+          
+        </div>
+        </div>
+        <%end%>
+      </div>
+  </div>
+</div>
+</div>

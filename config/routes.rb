@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     resources :bookings, except: [:update, :edit, :delete]
   end
     resources :bookings, only: :destroy
+    resources :users, only: :show
 end
