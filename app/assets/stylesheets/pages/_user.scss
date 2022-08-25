@@ -1,0 +1,117 @@
+#page-body {
+    background-color: #92B4EC;
+}
+
+.user-container {
+    width: 90%;
+    height: 100vh;
+   
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+
+
+.user-card {
+    height: 90%;
+    max-width: 30%;
+    background-color: rgba(195, 186, 186, 0.318);
+    //margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.user-card-header {
+    
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .avatar {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+
+.user-card-bookings {
+    background-color: lightblue;
+    height: 35%;
+    width: 80%;
+    text-align: center;
+    overflow-y:scroll;
+    padding: 0 10px;
+}
+
+.user-card-flights {
+    background-color: lightblue;
+    height: 35%;
+    width: 80%;
+    text-align: center;
+    padding: 0 10px;
+}
+
+
+.user-planes {
+    width: 65%;
+    height: 80%;
+    background-color: rgba(195, 186, 186, 0.318);
+
+    overflow-y: scroll;
+    
+}
+
+h2 {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+#user-planes-card {
+    
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+
+.user-planes-card-solo {
+    background-color: rgba(195, 186, 186, 0.318);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    //padding: 0 10px;
+    border: 1px solid rgba(0, 0, 0, 0.094);
+}
+
+.user-planes-card-stats {
+    background-color: lightblue;
+    padding: 20px 20px;
+    margin: 10px 0;
+}
+
+.p-booking {
+    margin: 0;
+    padding: 0;
+}
+
+#upcoming-bookings {
+    overflow-y: scroll;
+}
+
+#plane-card {
+    margin: 20px;
+}
+
