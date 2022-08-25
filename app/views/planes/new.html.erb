@@ -1,3 +1,7 @@
+<div class="body_form">
+<div class="container_form">
+<h2>Add your plane</h2>
+  <div class="navigation">
 <%= simple_form_for(@plane) do |f|%>
     <%= f.input :name %>
     <%= f.input :model %>
@@ -8,3 +12,6 @@
     <%= f.input :photos, as: :file, input_html: { multiple: true }%>
     <%= f.submit %>
   <% end %>
+</div>
+</div>
+</div>
