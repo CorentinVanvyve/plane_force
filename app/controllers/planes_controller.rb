@@ -2,7 +2,11 @@ class PlanesController < ApplicationController
   before_action :set_plane, only: [:show, :destroy]
 
   def index
-    @planes = policy_scope(Plane)
+    if params[:query].present?
+      @planes = Plane.search_by_name(params[:query])
+    else
+      @planes = policy_scope(Plane)
+    end
   end
 
   def show
