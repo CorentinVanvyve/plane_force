@@ -32,13 +32,10 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-
     authorize @booking
     @booking.destroy
-
-
-
-    redirect_to planes_path, status: :see_other
+    @plane = Plane.find(params[:plane_id])
+    redirect_to plane_path(@plane), status: :see_other
   end
 
   private
