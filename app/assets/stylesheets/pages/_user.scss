@@ -25,6 +25,7 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 0 30px;
+    border-radius: 10%;
 }
 
 .user-card-header {
@@ -36,8 +37,8 @@
     align-items: center;
 
     .avatar {
-        height: 60px;
-        width: 60px;
+        height: 80px;
+        width: 80px;
     }
 }
 
@@ -49,6 +50,8 @@
     text-align: center;
     overflow-y:scroll;
     padding: 0 10px;
+    border-radius: $border-radius-sm;
+
 }
 
 .user-card-flights {
@@ -57,6 +60,8 @@
     width: 80%;
     text-align: center;
     padding: 0 10px;
+    border-radius: $border-radius-sm;
+
 }
 
 
@@ -86,7 +91,7 @@ h2 {
 
 
 .user-planes-card-solo {
-    background-color: rgba(195, 186, 186, 0.318);
+    //background-color: rgba(195, 186, 186, 0.318);
 
     display: flex;
     justify-content: space-around;
@@ -100,6 +105,8 @@ h2 {
     background-color: lightblue;
     padding: 20px 20px;
     margin: 10px 0;
+    border-radius: $border-radius-sm;
+
 }
 
 .p-booking {
