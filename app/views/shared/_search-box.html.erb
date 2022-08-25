@@ -1,6 +1,13 @@
 <div class = "search-box" id = "search-box">
-  <%=image_tag "Plane Force-1.png" %>
-  <p>City</p>
-  <p>Start Date</p>
+
+  <label for="start-date">Start date</label>
+  <i class="fa-solid fa-plane-departure"></i>
+  <input type="text" id="start-date" name="start-date">
+
+  <label for="end-date">End date</label>
+  <i class="fa-solid fa-plane-arrival"></i>
+  <input type="text" id="end-date" name="end-date">
+
+
   <%=link_to "Search", "#", class: "btn-black"%>
 </div>
