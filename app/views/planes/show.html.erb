@@ -13,8 +13,8 @@
         <p>Owner : <%= owner.first_name %></p>
     </div>
   </div>
-  
-  
+
+
     <div class="buttons">
       <% if policy(@plane).edit?%>
       <div class="btn-blue">
@@ -43,12 +43,15 @@
     </div>
   </div>
 </div>
-
+<h2>Booking for this plane</h2>
   <ul>
     <% @plane.bookings.each do |booking| %>
-      <li><%= booking.start_date %> to <%= booking.end_date %> - ( <%= booking.price %>€ )</li>
+      <li>From <strong><%= booking.start_date.strftime('%d %B %Y') %></strong> to <strong><%= booking.end_date.strftime('%d %B %Y')  %></strong> - ( <%= booking.price %>€ )
       <% if policy(booking).destroy?%>
-     <%= link_to "delete",  booking_path(booking), data: { "turbo_method": :delete, "turbo_confirm": "Are you sure you want to remove ?"}, class: 'text-danger' %>
+     <%= link_to  booking_path(booking), data: { "turbo_method": :delete, "turbo_confirm": "Are you sure you want to remove ?"} do%>
+     <i class="fa-solid fa-trash"></i>
+     <% end %>
+     </li>
       <%end%>
     <% end %>
   </ul>
