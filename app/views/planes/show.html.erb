@@ -1,32 +1,35 @@
 <div class="show-plane">
   <div class="info-show-plane">
     <div class="container-content"><h1 class="planes-name"><%= @plane.name%> </h1>
-      <div class="info-price">
-        <p>Model : <%= @plane.model%></p>
-        <p>Price / h : <%= @plane.price_per_hour%></p>
-        <p>Seats : <%= @plane.seats%></p>
-      </div>
-      <p class="overview">Overview : <%= @plane.overview%></p>
-      <div class="info-owner">
-        <p>Address : <%= @plane.address%></p>
+
+        <h6>Model</h6>
+        <p><%= @plane.model%></p>
+        <h6>Price</h6>
+        <p><%= @plane.price_per_hour%> €/h</p>
+        <h6>Seats</h6>
+        <p><%= @plane.seats%></p>
+        <h6>Address</h6>
+        <p><%= @plane.address%></p>
         <% owner = User.find(@plane.user_id) %>
-        <p>Owner : <%= owner.first_name %></p>
-    </div>
+        <h6>Owner</h6>
+        <p><%= owner.first_name %></p>
+        <h6>Overview</h6>
+        <p><%= @plane.overview%></p>
   </div>
 
 
     <div class="buttons">
       <% if policy(@plane).edit?%>
-      <div class="btn-blue">
+      <div class="btn-plane">
           <%= link_to "Edit this plane", edit_plane_path(@plane) %>
       </div>
       <%end%>
       <% if policy(@plane).destroy?%>
-      <div class="btn-blue">
+      <div class="btn-plane">
       <%= link_to "Destroy this plane", plane_path(@plane), data: { turbo_method: :delete, turbo_confirm: "Please, we need your plane" }%>
     </div>
       <%end%>
-    <div class="btn-blue"><%= link_to "Book a flight w/ this plane",  new_plane_booking_path(@plane) %></div>
+    <div class="btn-plane"><%= link_to "Book a flight w/ this plane",  new_plane_booking_path(@plane) %></div>
     </div>
   </div>
 <div>
@@ -42,7 +45,9 @@
 
 </div>
 </div>
-<h2>Booking for this plane</h2>
+<% if @plane.bookings.count != 0 %>
+  <h2>Booking for this plane</h2>
+<% end %>
   <ul>
     <% @plane.bookings.each do |booking| %>
       <li>From <strong><%= booking.start_date.strftime('%d %B %Y') %></strong> to <strong><%= booking.end_date.strftime('%d %B %Y')  %></strong> - ( <%= booking.price %>€ )
