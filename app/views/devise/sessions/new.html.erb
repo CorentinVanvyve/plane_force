@@ -1,5 +1,7 @@
+<div class="body_form">
+<div class="container_form">
 <h2>Log in</h2>
-
+<div class="navigation">
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
   data: {turbo: false}) do |f| %>
   <div class="form-inputs">
@@ -19,3 +21,6 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>
+</div>
