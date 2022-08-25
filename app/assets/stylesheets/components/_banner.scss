@@ -9,35 +9,31 @@
 }
 
 .text-container {
- 
+
   display:flex;
   justify-content: center;
   align-items: space-between;
   text-align: center;
   flex-direction: column;
   border-radius: 10px;
-
 }
 
 #text-size{
   font-size: 60px;
   font-weight: bold;
   margin-top: 66px;
-  color: white;
+  color: $white;
 }
 
 
 #logo {
   height: 40px;
   width: 40px;
-  
-  
 }
 
 #animated {
   position: absolute;
   right: 0;
   top: 60px;
-  background-color: white;
-  
+  background-color: $white;
 }

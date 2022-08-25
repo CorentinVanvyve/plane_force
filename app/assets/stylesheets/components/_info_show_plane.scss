@@ -9,6 +9,7 @@
   display:flex;
   flex-direction: column;
   padding: 15px;
+  color: $black;
 }
 
 .planes-name {
@@ -35,26 +36,26 @@
   display: flex;
   flex-direction: row;
   text-align: center;
-  margin: 20px
+  margin: 20px;
+  color: black;
 }
 
 .btn-blue {
   border-radius: 10px;
   text-align: center;
-  background-color: blue;
+  background-color: $yellow;
   padding: 10px 20px;
   width: 200px;
   margin: 10px auto 30px auto;
+  color: black ;
 
   p {
     text-decoration: none;
-    color: white;
+    color: black;
     margin: 10px;
-
   }
-
 }
 
 .btn-blue:hover {
-  background-color: rgb(80, 80, 239);
+  background-color: $orange;
 }

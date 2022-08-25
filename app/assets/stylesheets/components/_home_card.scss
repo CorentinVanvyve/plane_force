@@ -1,11 +1,11 @@
 .home-card {
     height: 200px;
     width: 400px;
-    background-color: white;
+    background-color: $white;
     margin-bottom: 20px;
     border-radius: $border-radius-lg;
     display:flex;
-    border: 1px solid rgba(128, 128, 128, 0.369);
+    border: 1px solid $gray;
     box-shadow: $box-shadow;
 
     i{
@@ -15,7 +15,7 @@
 
 .home-card-img {
     width: 75%;
-    background-color: grey;
+    background-color: $light-gray;
     border-top-left-radius: $border-radius-lg;
     border-bottom-left-radius: $border-radius-lg;
     background-position:center;
