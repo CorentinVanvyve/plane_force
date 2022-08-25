@@ -5,17 +5,17 @@
   <% else%>
     <div class= "show-card-img" style = "background-image: url('https://www.arachnys.com/wp-content/uploads/2022/02/iStock-466619660.jpg');">
   <%end%>
-  <span><%= link_to plane.name,plane_path(plane), class: "plane-name-on-card" %></span>
   </div>
 
   <div class = "show-card-text">
     <div>
-      <p>Model: <%=plane.model%></p>
-      <p>Address: <%=plane.address%></p>
+      <p class='bold-plane-name' ><%=plane.name%></p>
+      <p class="model"><%=plane.model%></p>
+      <p><%=plane.price_per_hour%>€</p>
     </div>
-    <div>
-      <p>Price: <%=plane.price_per_hour%></p>
-      <p>Owner: <%=plane.user.first_name%></p>
+    <div class="card-price-adress">
+      <i class="fa-solid fa-user-pilot"></i>
+      <p><%=plane.user.first_name%></p>
     </div>
   </div>
 </div>
