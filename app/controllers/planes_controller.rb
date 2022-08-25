@@ -1,4 +1,5 @@
 class PlanesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_plane, only: [:show, :destroy]
 
   def index
@@ -10,7 +11,6 @@ class PlanesController < ApplicationController
   end
 
   def show
-    authorize @plane
   end
 
   def new
