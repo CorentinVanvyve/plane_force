@@ -3,27 +3,32 @@
     width: 600px;
     display:flex;
     flex-direction: column;
-    background-color: white;
+    background-color: $white;
     margin-bottom: 20px;
     //margin-left: 10px;
-    border: 8px solid white;
+    border: 8px solid $white;
     border-radius: $border-radius-lg;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.31);
+    box-shadow: $box-shadow;
     padding: 0px;
-
 
     img{
         background-position: center;
         object-fit: cover;
         width: 100%;
     }
+    a{
+      text-decoration: none;
+      color: $black;
+    }
+    a:hover{
+      text-decoration: none;
+      color: $gray;
+    }
 }
-
 
 .show-card-img {
    background-position: center;
    height: 100%;
-
    border-radius: 10px;
    // background-image: url("https://www.arachnys.com/wp-content/uploads/2022/02/iStock-466619660.jpg");
 }
@@ -47,7 +52,7 @@
     }
 
     .model{
-      color: rgb(161, 160, 160);
+      color: $light-gray;
       font-weight: 600;
     }
 }
@@ -62,16 +67,17 @@ justify-content: space-around;
   margin: 30px;
   border-radius: 10px;
   text-align: center;
-  background-color: blue;
-  padding: 5px
+  background-color: $yellow;
+  padding: 5px;
+  color: $black;
 }
 
 .btn-blue:hover {
-  background-color: rgb(80, 80, 239);
+  background-color: $orange;
 }
 
 .btn-blue a {
   text-decoration: none;
-  color: white;
+  color: $black;
   margin: 30px
 }

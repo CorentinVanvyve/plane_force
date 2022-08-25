@@ -1,6 +1,6 @@
 .body_form {
-  background: #92b4ec41;
-  color: #7fa0d6;
+  background: $light-blue;
+  color: $white;
   font-size: 1.5em;
   font-weight: 100;
   text-align: center;
@@ -8,13 +8,13 @@
 
 .container_form {
   border-radius: 20px;
-  background: #92B4EC;
-  color: #ffffff;
+  background: $blue;
+  color: $white;
   display: inline-block;
   padding: 2em 2em;
   margin: 2em auto;
   width: 50%;
-  box-shadow: 0 50px 50px rgba(0, 0, 0, .2);
+  box-shadow: $box-shadow;
 
   .navigation {
     text-align: left;
@@ -22,31 +22,31 @@
 
   input {
     border-radius: 10px;
-    background-color:  rgba(255, 255, 255, 0.485);
+    background-color:  $medium-blue;
     border: 0px;
     height: 40px;
   }
   textarea {
     border-radius: 10px;
-    background-color:  rgba(255, 255, 255, 0.485);
+    background-color:  $medium-blue;
     border: 0px;
     height: 40px;
   }
   select {
     border-radius: 10px;
-    background-color:  rgba(255, 255, 255, 0.485);
+    background-color:  $medium-blue;
     border: 0px;
     height: 40px;
   }
   a {
-    color: black;
+    color: $black;
     font-size: 16px;
     padding: 6px 12px;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
     border-radius: 10px;
-    background-color:  rgba(255, 255, 255, 0.485);
+    background-color:  $medium-blue;
     border: 0px;
     height: 47px;
   }
