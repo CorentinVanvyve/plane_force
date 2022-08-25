@@ -6,16 +6,22 @@
     <div class= "show-card-img" style = "background-image: url('https://www.arachnys.com/wp-content/uploads/2022/02/iStock-466619660.jpg');">
   <%end%>
   </div>
-
+<%= link_to plane_path(plane) do %>
   <div class = "show-card-text">
     <div>
       <p class='bold-plane-name' ><%=plane.name%></p>
-      <p class="model"><%=plane.model%></p>
-      <p><%=plane.price_per_hour%>€</p>
+      <p class="model"><%=plane.model%>  <i class="fa-solid fa-plane"></i> </p>
+      <% if plane.price_per_hour < 1000 %>
+      <i class="fa-solid fa-sack-dollar"></i>
+      <% elsif plane.price_per_hour > 1000 && plane.price_per_hour < 3000 %>
+      <i class="fa-solid fa-sack-dollar"></i><i class="fa-solid fa-sack-dollar"></i>
+      <% else %>
+      <i class="fa-solid fa-sack-dollar"></i><i class="fa-solid fa-sack-dollar"></i><i class="fa-solid fa-sack-dollar"></i>
+      <% end %>
     </div>
     <div class="card-price-adress">
-      <i class="fa-solid fa-user-pilot"></i>
-      <p><%=plane.user.first_name%></p>
+      <p><i class="fa-solid fa-user"></i>  <%=plane.user.first_name%></p>
     </div>
   </div>
 </div>
+<% end %>

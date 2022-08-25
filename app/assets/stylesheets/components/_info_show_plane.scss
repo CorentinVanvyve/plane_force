@@ -38,20 +38,20 @@
   margin: 20px
 }
 
-.btn-blue a {
-  text-decoration: none;
-  color: white;
-  margin: 10px
-}
-
 .btn-blue {
   border-radius: 10px;
   text-align: center;
   background-color: blue;
-  padding: 20px 30px;
+  padding: 10px 20px;
   width: 200px;
   margin: 10px auto 30px auto;
 
+  p {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+
+  }
 
 }
 

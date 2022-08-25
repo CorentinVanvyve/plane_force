@@ -6,9 +6,8 @@
       <%=render "planes/show-planes", plane: %>
     <% end %>
     </div>
+    <%= link_to new_plane_path() do %>
    <div class = "btn-blue">
-     <%= link_to "Add a plane", new_plane_path() %>
+     <p>Add a plane</p>
  </div>
-
-  
-  
+<% end %>
