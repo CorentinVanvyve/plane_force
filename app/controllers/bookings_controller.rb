@@ -32,12 +32,12 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    
+
     authorize @booking
     @booking.destroy
-    
-    
-    
+
+
+
     redirect_to planes_path, status: :see_other
   end
 
@@ -46,15 +46,16 @@ class BookingsController < ApplicationController
 
 
   def checking_availability
+    start = @booking.start_date.strftime('%s')
+    endd = @booking.end_date.strftime('%s')
+
     @time = (@booking.end_date.strftime('%s').to_i - @booking.start_date.strftime('%s').to_i)
     @price = @time * @plane.price_per_hour / 3600
     @booking.price = @price
     @available = true
-    return @available if @plane.bookings.empty?
+    return @available if @plane.bookings.empty? && start < endd
 
     @plane.bookings.each do |booking|
-      start = @booking.start_date.strftime('%s')
-      endd = @booking.end_date.strftime('%s')
 
       if start > booking.start_date.strftime('%s') && start < booking.end_date.strftime('%s')
         @available = false
@@ -65,6 +66,9 @@ class BookingsController < ApplicationController
       elsif start < booking.start_date.strftime('%s') && endd > booking.end_date.strftime('%s')
         @available = false
         flash.now[:notice] = "Not available this date."
+      elsif start > endd
+        @available = false
+        flash.now[:notice] = "Start date need to be before the end date"
       end
     end
     @available
