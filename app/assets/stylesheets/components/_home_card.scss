@@ -1,21 +1,15 @@
 .home-card {
     height: 200px;
     width: 400px;
-
-
     background-color: $white;
     margin-bottom: 20px;
-
     border-radius: $border-radius-lg;
     display:flex;
     border: 1px solid $gray;
     box-shadow: $box-shadow;
-
-
     i{
       margin-bottom: 16px;
     }
-
 }
 
 .home-card-img {
