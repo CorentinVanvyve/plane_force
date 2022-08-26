@@ -1,10 +1,7 @@
 .page-body-bookings {
-    background: rgb(34,162,195);
-    background: linear-gradient(25deg, rgba(34,162,195,1) 26%, rgba(45,63,253,1) 61%, rgba(178,183,232,1) 100%);
+    background: $gradient-gray;
     backdrop-filter: blur(2px);
     height: 100vh;
-
-
 }
 
 #bookings-container {
@@ -22,15 +19,13 @@
 .booking-card {
 
     height: 90%;
-    
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.19);
     border-radius: 16px;
-    box-shadow: inset 0 0 10px black;
     //box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.4px);
     -webkit-backdrop-filter: blur(5.4px);
-    border: 1px solid rgba(255, 255, 255, 0.56);
+    border: 1px solid black;
     //margin: 0 auto;
     //display: flex;
     //flex-direction: column;
