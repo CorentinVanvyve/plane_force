@@ -32,7 +32,7 @@
   flex-direction: row;
   text-align: center;
   margin: 20px;
-  color: black;
+  color: $black;
 }
 
 .btn-blue {
@@ -42,11 +42,11 @@
   padding: 10px 20px;
   width: 200px;
   margin: 10px auto 30px auto;
-  color: black ;
+  color: $black ;
 
   p {
     text-decoration: none;
-    color: black;
+    color: $black;
     margin: 10px;
   }
 }
