@@ -75,7 +75,11 @@ justify-content: space-around;
   background-color: $dark-blue;
 }
 
-.btn-blue a {
+.btn-blue p:hover {
+  text-decoration: none;
+}
+
+.btn-blue a:hover {
   text-decoration: none;
   color: $black;
   margin: 30px
