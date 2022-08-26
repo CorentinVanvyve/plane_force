@@ -1,8 +1,9 @@
 .show-plane{
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   padding: 10px;
 }
+
 
 
 .info-show-plane {
@@ -32,30 +33,33 @@
   flex-direction: row;
   text-align: center;
   margin: 20px;
-  color: black;
+  color: $black;
 }
 
 .btn-blue {
   border-radius: 10px;
   text-align: center;
-  background-color: $yellow;
   padding: 10px 20px;
   width: 200px;
   margin: 10px auto 30px auto;
-  color: black ;
+  color: $black ;
 
   p {
     text-decoration: none;
-    color: black;
+    color: $black;
     margin: 10px;
   }
 }
 
 .btn-blue:hover {
-  background-color: $orange;
+  background-color: $dark-blue;
 }
 
 h6 {
   font-weight: 700;
   font-size: 18px;
+}
+
+.container-content {
+  margin: 0 40px;
 }

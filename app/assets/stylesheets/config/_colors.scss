@@ -2,14 +2,17 @@
 
 // For example:
 $red: #FD1015;
-$blue: #92B4EC;
+$blue: #b6cff6;
 $light-blue: #8CC3E3;
 $white: #FFFFFF;
 $yellow: #FFE69A;
 $orange: #FFD24C;
 $green: #1EDD88;
 $gray: rgba(39, 38, 38, 0.85);
-$light-gray: #a9a4a4;
+$light-gray: #b1adad;
+$lighter-gray: #f5f1f1;
 $black: black;
 $medium-blue: rgba(255, 255, 255, 0.485);
-$dark-blue: #5f8bd0;
+$dark-blue: #517dc4;
+$gradient-blue: linear-gradient(25deg, rgba(34,162,195,1) 26%, rgba(45,63,253,1) 61%, rgba(178,183,232,1) 100%);
+$gradient-gray: linear-gradient(76deg, rgba(246,246,246,1) 0%, rgba(245,247,247,1) 50%, rgba(233,234,235,1) 100%);

@@ -1,11 +1,20 @@
 <div class = "search-box" id = "search-box">
 
-  <label for="start-date">  <i class="fa-solid fa-plane-departure"></i></label>
-  <input type="text" id="start-date" name="start-date">
+  <%= form_with url: planes_path, method: :get, class: "d-flex" do %>
+  <label for="start-date"> <i class="fa-solid fa-plane-departure"></i></label>
+   <input type="text"
+   <%= text_field_tag :start_date,
+   params[:start_date],
+   class: "form-control",
+   placeholder: "choose a start date" %>
 
-  <label for="end-date"><i class="fa-solid fa-plane-arrival"></i></label>
-  <input type="text" id="end-date" name="end-date">
 
+  <label for="end-date"> <i class="fa-solid fa-plane-arrival"> </i> </label>
+  <input type="text" <%= text_field_tag :end_date,
+      params[:end_date],
+      class: "form-control",
+      placeholder: "choose a start date" %>
 
-  <%=link_to "Search", "#", class: "btn-black"%>
+  <%= submit_tag "Search", class: "btn-black" %>
+  <% end %>
 </div>

@@ -1,9 +1,11 @@
+require "open-uri"
+
 puts "Cleaning database ...."
 Plane.destroy_all
 User.destroy_all
 
 
-puts "Generating Users and planes ..."
+puts "Generating Users ..."
 
 
 badass1 = User.create(email: "coco@gmail.com", first_name: "coco", last_name: 'string', username: "map", password: "123456")
@@ -12,9 +14,9 @@ badass3 = User.create(email: "steph@gmail.com", first_name: "steph", last_name: 
 badass4 = User.create(email: "tenzayn@gmail.com", first_name: "tenzayn", last_name: 'fullstack', username: "html", password: "123456")
 badass5 = User.create(email: "ambroise@gmail.com", first_name: "ambroise", last_name: 'figma', username: "javascript", password: "123456")
 
+puts "Generating planes..."
 
-
-Plane.create(name: "AmericanAirlines", model: "A001", price_per_hour: 600, seats: 200, overview: "
+ Plane.create(name: "AmericanAirlines", model: "A001", price_per_hour: 600, seats: 200,  overview: "
   American Airlines is considered to be a safe airline and has excellent mileage redemption options. It offers flights to many destinations worldwide and has a variety of ticket types for travelers of all budgets.", address: "911 Newyorkstreet 007", user: badass1)
 Plane.create(name: "BrusselsAirlines", model: "B800", price_per_hour: 500, seats: 140, overview: "Brussels Airlines brings the world to Belgium and the best of Belgium to the world, among others through collaborations with Belgian Star Chefs, Belgian culinary products and the Belgian Icons, specially painted aircraft that honor a Belgian iconic person, team or event to promote Belgian culture worldwide.", address: "001 brussels gate 712", user: badass1)
 Plane.create(name: "Fly Emirates", model: "F200", price_per_hour: 5900, seats: 67, overview: "Emirates is Certified as a 4-Star Airline for the quality of its airport and onboard product and staff service. Product rating includes seats, amenities, food & beverages, IFE, cleanliness etc, and service rating is for both cabin staff and ground staff.", address: "Dubai 007", user: badass1)

@@ -1,10 +1,16 @@
 class PlanesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_after_action :verify_policy_scoped, :only => :index
   before_action :set_plane, only: [:show, :destroy]
 
   def index
-    #@planes = Plane.all
-    @planes = policy_scope(Plane)
+    if params[:start_date].present? && params[:end_date].present?
+      start_date = params[:start_date].to_date
+      end_date = params[:end_date].to_date
+      @planes = Plane.left_joins(:bookings).where("bookings.end_date < ? OR bookings.start_date > ? OR bookings.id is null", start_date, end_date)
+    else
+      @planes = Plane.all
+    end
   end
 
   def show
