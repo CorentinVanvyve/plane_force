@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   resources :planes do
     resources :bookings, except: [:update, :edit, :delete]
   end
-    resources :bookings, only: :destroy
+    resources :bookings, only: [ :destroy]
     resources :users, only: :show
 end

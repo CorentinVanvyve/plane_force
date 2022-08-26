@@ -14,7 +14,7 @@
           <p><i class="fa-solid fa-plane"></i> <span class = "plane-name"><%=plane.name%></span> <i class="fa-solid fa-plane"></i></p>
           <%plane.bookings.each do |booking|%>
           <p> <i class="fa-solid fa-calendar-week"></i> </p>
-            <%=(booking.start_date).to_formatted_s(:long_ordinal)%> to<br>
+            <%=link_to (booking.start_date).to_formatted_s(:long_ordinal), plane_booking_path(booking.plane, booking)%> to<br>
             <%=(booking.end_date).to_formatted_s(:long_ordinal)%><br>
             <%end%>
             <%end%>
@@ -22,6 +22,7 @@
       <div class = "user-card-flights">
         <h3>Planes you've booked</h3>
         <%@user.bookings.each do |booking|%>
+         <%=link_to (booking.start_date).strftime("%B %d, %Y"), plane_booking_path(booking.plane, booking)%>
         <span class = "plane-name"><%=booking.plane.name%></span> <%=(booking.end_date).strftime("%B %d, %Y")%><br>
         <%end%>
       </div>
@@ -39,7 +40,8 @@
           <span class = "upcoming-bookings">
           <%plane.bookings.each do |booking|%>
               <%@revenue += booking.price%>
-              <p class = "p-booking"><%=(booking.end_date).strftime("%B %d, %Y")%></p>
+               <%=link_to (booking.end_date).strftime("%B %d, %Y"), plane_booking_path(booking.plane, booking)%><br>
+              
               <%end%>
               </span>
           

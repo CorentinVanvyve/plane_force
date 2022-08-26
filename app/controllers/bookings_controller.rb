@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
 
   def show
     authorize @booking
+    @plane = Plane.find(params[:plane_id])
   end
 
   def new
