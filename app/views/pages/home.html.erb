@@ -1,12 +1,4 @@
 <%= render "pages/banner"%>
-  <%= form_with url: planes_path, method: :get, class: "d-flex" do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a plane"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
   <div class = "pages-text-background">
     <h1>Plane Force: Travel in Style</h1>
 
