@@ -1,8 +1,9 @@
 .show-plane{
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   padding: 10px;
 }
+
 
 
 .info-show-plane {
@@ -58,4 +59,8 @@
 h6 {
   font-weight: 700;
   font-size: 18px;
+}
+
+.container-content {
+  margin: 0 40px;
 }

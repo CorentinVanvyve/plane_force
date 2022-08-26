@@ -27,11 +27,10 @@
 }
 
 .show-card-img {
-   background-position: center;
+  background-size: cover;
    height: 100%;
    border-radius: 10px;
-   // background-image: url("https://www.arachnys.com/wp-content/uploads/2022/02/iStock-466619660.jpg");
-}
+  }
 
 .show-card-text {
     display:flex;
