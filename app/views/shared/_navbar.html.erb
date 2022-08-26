@@ -12,6 +12,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
 
+
         <% if user_signed_in? %>
           <li class="nav-item ">
              <%=link_to "Hi #{(current_user.first_name).capitalize}", planes_path, class: "nav-link"%>
