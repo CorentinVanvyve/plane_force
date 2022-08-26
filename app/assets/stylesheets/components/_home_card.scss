@@ -11,7 +11,7 @@
 }
 
 .home-card-img {
-    width: 75%;
+    width: 66%;
     background-color: $light-gray;
     border-top-left-radius: $border-radius-lg;
     border-bottom-left-radius: $border-radius-lg;
@@ -21,6 +21,7 @@
 }
 
 .home-card-text {
+    width: 34%;
     display: flex;
     flex-direction: column;
     justify-content: center;
