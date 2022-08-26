@@ -1,8 +1,13 @@
+
+
 #page-body {
     background: rgb(34,162,195);
     background: linear-gradient(25deg, rgba(34,162,195,1) 26%, rgba(45,63,253,1) 61%, rgba(178,183,232,1) 100%);
     backdrop-filter: blur(2px);
+    
 }
+
+
 
 .user-container {
     width: 90%;
@@ -160,6 +165,11 @@
     .user-card {
         max-width: 100%;
         margin: 20px 0px;
+
+        .avatar {
+            height: 40px;
+            width: 40px;
+        }
     }
 
     .user-planes {
