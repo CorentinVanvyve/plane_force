@@ -11,7 +11,7 @@
       <div class = "user-card-bookings">
         <h3>Bookings for your planes</h3>
         <% plane = @user.planes.each do |plane|%>
-          <p><i class="fa-solid fa-plane"></i> <span class = "plane-name"><%=plane.name%></span><i class="fa-solid fa-plane"></i></p>
+          <p><i class="fa-solid fa-plane"></i> <span class = "plane-name"><%=plane.name%></span> <i class="fa-solid fa-plane"></i></p>
           <%plane.bookings.each do |booking|%>
           <p> <i class="fa-solid fa-calendar-week"></i> </p>
             <%=(booking.start_date).to_formatted_s(:long_ordinal)%> to<br>

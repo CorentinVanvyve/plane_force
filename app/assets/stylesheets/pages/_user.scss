@@ -151,3 +151,24 @@
     font-weight: bold;
 }
 
+@media (max-width: 700px) {
+    .user-container {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .user-card {
+        max-width: 100%;
+        margin: 20px 0px;
+    }
+
+    .user-planes {
+        min-height: 500px;
+        width: 100%;
+
+        .home-card {
+            display: none;
+        }
+        
+    }
+}
