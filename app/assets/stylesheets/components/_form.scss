@@ -1,5 +1,5 @@
 .body_form {
-  background: $light-blue;
+  background: $gradient-gray;
   color: $white;
   font-size: 1.5em;
   font-weight: 100;
@@ -26,6 +26,13 @@
     border: 0px;
     height: 40px;
   }
+
+  input:focus {
+    color: rgba(198, 193, 193, 0.85);
+    background-color: #e5e4e4 !important;
+    border-color: #dbe7fb;
+  }
+
   textarea {
     border-radius: 10px;
     background-color:  $medium-blue;
